@@ -1,6 +1,6 @@
 package com.std.arithemic.offer;
 
-import com.std.arithemic.offer.domain.ListNode;
+import com.std.arithemic.domain.ListNode;
 
 import java.util.Objects;
 import java.util.Stack;

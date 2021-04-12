@@ -1,4 +1,4 @@
-package com.std.arithemic.offer.domain;
+package com.std.arithemic.domain;
 
 /**
  * @author qushuang

@@ -16,14 +16,11 @@ public class HeapSort {
         heapsort(nums, 6);
         System.out.println(Arrays.toString(nums));
     }
-
     static void heapsort(int[] nums, int n) {
-
         // 先建大顶堆
         for (int i = n / 2 - 1; i >= 0; i--) {
             heapAdjust(nums, i, n);
         }
-
         for (int i = 0; i < n - 1; i++) {
             swap(nums, 0, n - i - 1);
             heapAdjust(nums, 0, n - i - 1);
@@ -36,15 +33,10 @@ public class HeapSort {
     }
     // 调整堆
     static void heapAdjust(int arr[], int index, int n) {
-
         int temp = arr[index];
-
         int child = 0;
-
         while (index * 2 + 1 < n) {
-
             child = index * 2 + 1;
-
             // child为左右孩子中较大的那个
             if (child != n - 1 && arr[child] < arr[child + 1]) {
                 child++;
@@ -58,7 +50,6 @@ public class HeapSort {
                 index = child;
             }
         }
-
         arr[index] = temp;
     }
 }
@@ -85,7 +76,6 @@ class HeapSortV2 {
             maxHeap(arr, i, 0);
         }
     }
-
     /**
      * 将数组转大顶堆
      *
@@ -94,7 +84,6 @@ class HeapSortV2 {
      * @param index 开始的位置，在数组转大顶堆的时候给定，初始给定的是最后叶节点的父节点
      */
     public static void maxHeap(int[] arr, int size, int index) {
-
         // 左子节点
         int leftNode = 2 * index + 1;
         // 右子节点

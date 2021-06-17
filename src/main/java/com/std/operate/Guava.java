@@ -1,7 +1,10 @@
 package com.std.operate;
 
 import com.google.common.base.Objects;
+import com.google.common.base.Throwables;
 import com.google.common.collect.ComparisonChain;
+import com.google.common.collect.ImmutableSet;
+import com.google.common.collect.UnmodifiableIterator;
 
 import java.util.Optional;
 
@@ -15,15 +18,25 @@ public class Guava {
 
     public static void main(String[] args) {
 
-        StringBuilder builder = new StringBuilder();
-        int templateStart = 0;
-        String s = "aaa%sbbbb";
+//        StringBuilder builder = new StringBuilder();
+//        int templateStart = 0;
+//        String s = "aaa%sbbbb";
+//
+//        int placeholderStart = s.indexOf("%s", templateStart);
+//        builder.append(s, templateStart, placeholderStart);
+//        System.out.println(placeholderStart);
+//        System.out.println(templateStart);
+//        System.out.println(builder.toString());
 
-        int placeholderStart = s.indexOf("%s", templateStart);
-        builder.append(s, templateStart, placeholderStart);
-        System.out.println(placeholderStart);
-        System.out.println(templateStart);
-        System.out.println(builder.toString());
+        ImmutableSet<String> immutableSet = ImmutableSet.<String>builder()
+                .add("1")
+                .add("2")
+                .add("1")
+                .build();
+        UnmodifiableIterator<String> iterator = immutableSet.iterator();
+        while (iterator.hasNext()) {
+            System.out.println(iterator.next());
+        }
     }
 
     public static void method(String[] args) {
@@ -38,8 +51,10 @@ public class Guava {
         Objects.equal(null, null);
         Objects.hashCode("1", "2", "abc");
 
-        ComparisonChain.start().compare(1, 1)
+        int result = ComparisonChain.start().compare(1, 1)
                 .compare(1, 2).result();
+
+        throw Throwables.propagate(new RuntimeException());
 
 
     }

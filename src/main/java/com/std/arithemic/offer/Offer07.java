@@ -30,11 +30,21 @@ public class Offer07 {
      }
 
     static class Solution {
-        public TreeNode buildTree(int[] preorder, int[] inorder) {
-            TreeNode rest = new TreeNode(0), cur = rest;
-
-
-            return rest;
+        int inp = 0, prep = 0;
+        public TreeNode buildTree(int[] preorder,int[] inorder){
+            return build2(preorder,inorder,Integer.MAX_VALUE);
+        }
+        public TreeNode build2(int[] preorder,int[] inorder,int stop){
+            if(prep >= preorder.length){
+                return null;
+            }
+            //如果stop与中序inp相等，说明左树完结，返回
+            if(inorder[inp] == stop){ inp++; return null;}
+            //创造节点加入树，同时调用，而节点的值加入了stop栈（调用体现）
+            TreeNode node = new TreeNode(preorder[prep++]);
+            node.left = build2(preorder,inorder,node.val);
+            node.right = build2(preorder,inorder,stop);
+            return node;
         }
     }
 }

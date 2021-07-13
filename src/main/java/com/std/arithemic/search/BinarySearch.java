@@ -9,8 +9,8 @@ public class BinarySearch {
     public static int binarySearchByWhile (int[] sourceArray, int targetValue) {
         int lowIndex = 0;
         int highIndex = sourceArray.length - 1;
-        while (lowIndex < highIndex) {
-            int middleIndex = (highIndex - lowIndex) >> 1;
+        while (lowIndex <= highIndex) {
+            int middleIndex = lowIndex + (highIndex - lowIndex) >> 1;
             if (targetValue == sourceArray[middleIndex]) {
                 return middleIndex;
             } else if (targetValue < sourceArray[middleIndex]) {

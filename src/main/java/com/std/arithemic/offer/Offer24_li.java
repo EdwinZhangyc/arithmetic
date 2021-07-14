@@ -17,7 +17,7 @@ import java.util.Objects;
  * 输入: 1->2->3->4->5->NULL
  * 输出: 5->4->3->2->1->NULL
  */
-public class Offer24_r {
+public class Offer24_li {
     static class Solution {
         public static ListNode reverseList(ListNode head) {
             ListNode cur = null;

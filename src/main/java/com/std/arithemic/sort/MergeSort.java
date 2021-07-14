@@ -72,7 +72,7 @@ class MergeSortBilibili {
 
     static void mergeSort(int[] arr, int low, int high) {
         if (high > low) {
-            int middle = (low + high) / 2;
+            int middle = low + ((high - low) >> 1);
             // 处理左边
             mergeSort(arr, low, middle);
             // 处理右边
@@ -96,24 +96,20 @@ class MergeSortBilibili {
             // 第一个数组的数据更小
             if (arr[i] <= arr[j]) {
                 //将小的数据放入到临时数组中
-                temp[index] = arr[i];
-                index++;
+                temp[index++] = arr[i];
                 i++;
             } else {
-                temp[index] = arr[j];
-                index++;
+                temp[index++] = arr[j];
                 j++;
             }
         }
         // 处理多余数据
         while (j <= high) {
-            temp[index] = arr[j];
-            index++;
+            temp[index++] = arr[j];
             j++;
         }
         while (i <= middle) {
-            temp[index] = arr[i];
-            index++;
+            temp[index++] = arr[i];
             i++;
         }
         // 把临时数据添加到原数组中

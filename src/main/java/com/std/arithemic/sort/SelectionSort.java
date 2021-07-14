@@ -16,18 +16,13 @@ public class SelectionSort {
         System.out.println(Arrays.toString(arrs));
     }
 
-
     public static void funSelectionSort(int[] array) {
-
         for (int i = 0; i < array.length - 1; i++) {
             int mink = i;
-
             for (int j = 1 + i; j < array.length; j++) {
-
                 if (array[j] < array[mink])
                     mink = j;
             }
-
             if (mink != i) {
                 int temp = array[mink];
                 array[mink] = array[i];

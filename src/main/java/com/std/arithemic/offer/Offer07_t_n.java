@@ -20,7 +20,7 @@ package com.std.arithemic.offer;
  *     /  \
  *    15   7
  */
-public class Offer07 {
+public class Offer07_t_n {
 
      static class TreeNode {
           int val;

@@ -37,7 +37,7 @@ import java.util.Objects;
  *
  * 0 <= 节点个数 <= 1000
  */
-public class Offer27 {
+public class Offer27_t {
 
     public TreeNode mirrorTree(TreeNode root) {
         if (Objects.isNull(root)) {

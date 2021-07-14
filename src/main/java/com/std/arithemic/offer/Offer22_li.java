@@ -20,7 +20,7 @@ import java.util.Objects;
  *
  * 返回链表 4->5.
  */
-public class Offer22_r {
+public class Offer22_li {
     static class Solution {
         public static ListNode getKthFromEnd(ListNode head, int k) {
             ListNode result = head, cur = head;

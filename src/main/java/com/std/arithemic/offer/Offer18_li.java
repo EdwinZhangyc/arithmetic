@@ -25,7 +25,7 @@ import java.util.Objects;
  * 输出: [4,5,9]
  * 解释: 给定你链表中值为 1 的第三个节点，那么在调用了你的函数之后，该链表应变为 4 -> 5 -> 9.
  */
-public class Offer18_r {
+public class Offer18_li {
 
     static class Solution {
         public ListNode deleteNodeV1(ListNode head, int val) {

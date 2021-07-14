@@ -37,7 +37,7 @@ import com.std.arithemic.domain.TreeNode;
  *
  * 0 <= 节点个数 <= 10000
  */
-public class Offer26 {
+public class Offer26_t {
     public boolean isSubStructure(TreeNode A, TreeNode B) {
         if (A == null || B == null) {
             return false;

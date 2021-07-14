@@ -39,7 +39,7 @@ import com.std.arithemic.domain.TreeNode;
  *
  * 0 <= 节点个数 <= 1000
  */
-public class Offer28 {
+public class Offer28_t {
 
     public boolean isSymmetric(TreeNode root) {
         return preOrder(root, build(root));

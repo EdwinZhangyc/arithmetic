@@ -29,7 +29,8 @@ public class Drill557 {
             }
             StringBuilder stringBuilder = new StringBuilder();
             String[] split = s.split(" ");
-            for (int i = 0; i < split.length; i++) {
+            int big = split.length - 1;
+            for (int i = 0; i != split.length; i++) {
                 String str = split[i];
                 char[] chars = str.toCharArray();
                 int left = 0, right=str.length() - 1;
@@ -41,7 +42,7 @@ public class Drill557 {
                     right--;
                 }
                 stringBuilder.append(chars);
-                if (i < split.length - 1) {
+                if (i != big) {
                     stringBuilder.append(' ');
                 }
             }

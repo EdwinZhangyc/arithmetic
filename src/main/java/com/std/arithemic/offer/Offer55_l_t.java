@@ -3,7 +3,6 @@ package com.std.arithemic.offer;
 import com.std.arithemic.domain.TreeNode;
 
 import java.util.LinkedList;
-import java.util.Objects;
 import java.util.Queue;
 
 /**
@@ -12,24 +11,24 @@ import java.util.Queue;
  */
 public class Offer55_l_t {
     class Solution {
-        public int maxDepth(TreeNode root) {
+        public int maxDepthV1 (TreeNode root) {
             int deep = 0;
-            if (Objects.isNull(root)) {
+            if (root == null) {
                 return deep;
             }
-            Queue<TreeNode> queue = new LinkedList<TreeNode>();
+            Queue<TreeNode> queue = new LinkedList<>();
             queue.add(root);
             while (!queue.isEmpty()) {
-                for(int i = queue.size(); i > 0; i--) {
-                    TreeNode node = queue.poll();
-                    if(node.left != null) {
+                for (int i = 0; i < queue.size(); i++) {
+                    TreeNode node = queue.remove();
+                    if (node.left != null) {
                         queue.add(node.left);
                     }
-                    if(node.right != null) {
+                    if (node.right != null) {
                         queue.add(node.right);
                     }
                 }
-                deep++;
+                deep ++;
             }
             return deep;
         }

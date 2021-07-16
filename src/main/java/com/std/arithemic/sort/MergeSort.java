@@ -18,52 +18,10 @@ import java.util.Arrays;
  * 用时 O(logN)
  */
 public class MergeSort {
-    //归并排序
-    static void funMergeSort(int[] array) {
-        if (array.length > 1) {
-            int length1 = array.length / 2;
-            int[] array1 = new int[length1];
-            System.arraycopy(array, 0, array1, 0, length1);
-            funMergeSort(array1);
-            int length2 = array.length - length1;
-            int[] array2 = new int[length2];
-            System.arraycopy(array, length1, array2, 0, length2);
-            funMergeSort(array2);
-            int[] datas = merge(array1, array2);
-            System.arraycopy(datas, 0, array, 0, array.length);
-        }
-    }
 
-    //合并两个数组
-    static int[] merge(int[] list1, int[] list2) {
-
-        int[] list3 = new int[list1.length + list2.length];
-        int count1 = 0;
-        int count2 = 0;
-        int count3 = 0;
-        while (count1 < list1.length && count2 < list2.length) {
-            if (list1[count1] < list2[count2]) {
-                list3[count3++] = list1[count1++];
-            } else {
-                list3[count3++] = list2[count2++];
-            }
-        }
-        while (count1 < list1.length) {
-            list3[count3++] = list1[count1++];
-        }
-        while (count2 < list2.length) {
-            list3[count3++] = list2[count2++];
-        }
-        return list3;
-    }
-}
-
-
-/**
- * 归并排序   首先将数组进行差分，分成一个数组中只有一个值得情况   在进行合并比较。
- */
-class MergeSortBilibili {
-
+    /**
+     * 归并排序   首先将数组进行差分，分成一个数组中只有一个值得情况   在进行合并比较。
+     */
     public static void main(String[] args) {
         int[] arrs = {5, 2, 6, 9, 1, 8, 3, 7, 4};
         mergeSort(arrs, 0, arrs.length - 1);

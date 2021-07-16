@@ -1,6 +1,8 @@
 package com.std.arithemic.drill;
 
 import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * @author zyc
@@ -92,6 +94,7 @@ public class Drill189 {
                 startIndex ++;
                 endIndex --;
             }
+            Set<Object> set = new HashSet<>(10);
         }
     }
 }

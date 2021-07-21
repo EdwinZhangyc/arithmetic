@@ -11,6 +11,31 @@ public class TestArithemic {
     public static void main(String[] args) {
 
     }
+    ListNode hashNode (ListNode node) {
+        if (node == null) {
+            return node;
+        }
+        ListNode fast = node, slow = node;
+        while (true) {
+            if (fast == null || slow == null) {
+                break;
+            }
+            fast = fast.next.next;
+            slow = slow.next;
+            if (fast == slow) {
+                break;
+            }
+        }
+        if (fast != slow) {
+            return null;
+        }
+        ListNode result = node;
+        while (slow != result) {
+            slow = slow.next;
+            result = result.next;
+        }
+        return result;
+    }
 
     private static ListNode revert (ListNode node) {
         ListNode result = null;

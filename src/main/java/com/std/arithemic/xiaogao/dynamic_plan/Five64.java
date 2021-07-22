@@ -32,7 +32,7 @@ package com.std.arithemic.xiaogao.dynamic_plan;
 public class Five64 {
     class Solution {
         public int minPathSum(int[][] grid) {
-
+            return 0;
         }
     }
 }

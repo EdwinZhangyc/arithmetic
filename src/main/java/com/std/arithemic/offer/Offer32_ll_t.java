@@ -36,7 +36,7 @@ import java.util.Queue;
  *
  * 节点总数 <= 1000
  */
-public class Offer32_ll_t_n {
+public class Offer32_ll_t {
     class Solution {
         public List<List<Integer>> levelOrder(TreeNode root) {
             Queue<TreeNode> queue = new LinkedList<>();

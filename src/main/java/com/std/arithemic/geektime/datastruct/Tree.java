@@ -53,8 +53,7 @@ public class Tree {
                 pp = p;
                 if (data > p.val) {
                     p = p.right;
-                }
-                else {
+                } else {
                     p = p.left;
                 }
             }

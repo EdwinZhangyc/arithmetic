@@ -8,7 +8,7 @@ import java.util.Objects;
  * @author zyc
  * @date 2021/7/13 20:44
  */
-public class LinkedList {
+public class Linked {
     /**
      * 单链表反转 offer6 offer24
      *

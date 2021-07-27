@@ -11,7 +11,7 @@ import java.util.Queue;
 public class TestSort {
 
     public static void main(String[] args) {
-        int[] nums = {63,129,30,2,24,88,99,17};
+        int[] nums = {63,129,30,2,24,88,99,17,290};
 //        bubbleSort (nums);
 //        insertSort (nums);
 //        selectSort (nums);

@@ -74,7 +74,7 @@ public class TestSort {
     }
 
     private static void bucketSort(int[] nums) {
-        Queue<Integer>[] queues = new LinkedList[10];
+        LinkedList<Integer>[] queues = new LinkedList[10];
         for (int i = 0; i < queues.length; i++) {
             queues[i] = new LinkedList<>();
         }
@@ -126,9 +126,7 @@ public class TestSort {
         while (highIndex <= endIndex) {
             temp[tempIndex++] = nums[highIndex++];
         }
-        for (int i = 0; i < temp.length; i++) {
-            nums[i + startIndex] = temp[i];
-        }
+        System.arraycopy(temp, 0, nums, startIndex, temp.length);
     }
 
     private static void selectSort(int[] nums) {

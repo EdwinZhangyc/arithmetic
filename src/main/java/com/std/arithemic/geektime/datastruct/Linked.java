@@ -46,11 +46,7 @@ public class Linked {
             return node.next;
         }
         int index = 1;
-        while (Objects.nonNull(node)) {
-            if (index == k) {
 
-            }
-        }
         return node;
     }
     ListNode mergeNode (ListNode node1, ListNode node2) {

@@ -32,6 +32,14 @@ public class DP122 {
             int[] nums = {7,1,5,3,6,4};
             System.out.println(maxProfit(nums));
         }
+        public static int maxProfitMulti(int[] prices) {
+            int no = 0, yes = -prices[0];
+            for (int i=1; i < prices.length;i++) {
+                no = Math.max(no, yes + prices[i]);
+                yes = Math.max(yes, no - prices[i]);
+            }
+            return no;
+        }
         public static int maxProfit(int[] prices) {
             if (prices == null) {
                 return -1;

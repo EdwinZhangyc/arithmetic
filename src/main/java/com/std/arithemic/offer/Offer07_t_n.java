@@ -32,9 +32,9 @@ public class Offer07_t_n {
     static class Solution {
         int inp = 0, prep = 0;
         public TreeNode buildTree(int[] preorder,int[] inorder){
-            return build2(preorder,inorder,Integer.MAX_VALUE);
+            return buildTree(preorder,inorder,Integer.MAX_VALUE);
         }
-        public TreeNode build2(int[] preorder,int[] inorder,int stop){
+        public TreeNode buildTree(int[] preorder,int[] inorder,int stop){
             if(prep >= preorder.length){
                 return null;
             }
@@ -42,8 +42,8 @@ public class Offer07_t_n {
             if(inorder[inp] == stop){ inp++; return null;}
             //创造节点加入树，同时调用，而节点的值加入了stop栈（调用体现）
             TreeNode node = new TreeNode(preorder[prep++]);
-            node.left = build2(preorder,inorder,node.val);
-            node.right = build2(preorder,inorder,stop);
+            node.left = buildTree(preorder,inorder,node.val);
+            node.right = buildTree(preorder,inorder,stop);
             return node;
         }
     }

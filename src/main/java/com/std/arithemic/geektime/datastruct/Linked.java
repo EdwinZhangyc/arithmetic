@@ -50,6 +50,7 @@ public class Linked {
         return node;
     }
     ListNode mergeNode (ListNode node1, ListNode node2) {
+
         ListNode result = new ListNode(0), cur = result;
         while (Objects.nonNull(node1) && Objects.nonNull(node2)) {
             if (node1.val > node2.val) {

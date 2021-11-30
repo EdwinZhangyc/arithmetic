@@ -20,6 +20,7 @@
         <groovy.version>3.0.3</groovy.version>
         <validation-api.version>2.0.1.Final</validation-api.version>
         <commons-text.version>1.8</commons-text.version>
+        <junit.version>4.12</junit.version>
 
         <!--maven.build.timestamp保存了maven编译时间戳-->
         <timestamp>${maven.build.timestamp}</timestamp>
@@ -80,6 +81,12 @@
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-text</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
         </dependency>
 <!--        <dependency>-->
 <!--            <groupId>org.projectlombok</groupId>-->
